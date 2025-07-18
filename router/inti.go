@@ -2,11 +2,11 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	v1 "github.com/pento-zh/gin-test/router/api/v1"
+	"github.com/pento-zh/gin-test/router/api"
+	"github.com/pento-zh/gin-test/router/web"
 )
 
 func Init(e *gin.Engine) {
-
-	apiGroup := e.Group("/api")
-	v1.Init(apiGroup)
+	web.Init(e)
+	api.Init(e)
 }

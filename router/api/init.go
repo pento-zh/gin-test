@@ -1,13 +1,13 @@
-package v1
+package api
 
 import (
 	"github.com/gin-gonic/gin"
 	v1 "github.com/pento-zh/gin-test/api/v1"
 )
 
-func Init(e *gin.RouterGroup) {
-	v1Group := e.Group("/v1")
-	test(v1Group)
+func Init(e *gin.Engine) {
+	apiGroup := e.Group("/api/v1")
+	test(apiGroup)
 }
 
 func test(g *gin.RouterGroup) {
