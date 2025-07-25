@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/pento-zh/gin-test/db"
 	"github.com/pento-zh/gin-test/router"
 
 	"github.com/gin-gonic/gin"
@@ -9,5 +10,6 @@ import (
 func main() {
 	e := gin.Default()
 	router.Init(e)
+	db.Init()
 	e.Run() // 监听并在 0.0.0.0:8080 上启动服务
 }
