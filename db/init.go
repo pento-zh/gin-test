@@ -23,4 +23,5 @@ func Init() {
 	db := GetDb()
 	// 迁移 schema
 	db.AutoMigrate(&model.Product{})
+	db.AutoMigrate(&model.Order{})
 }
